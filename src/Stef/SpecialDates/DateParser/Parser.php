@@ -1,14 +1,14 @@
 <?php
 
-namespace Stef\SpecialDatesBundle\DateParser;
+namespace Stef\SpecialDates\DateParser;
 
-use Stef\SpecialDatesBundle\Dates\ChristmasEvening;
-use Stef\SpecialDatesBundle\Dates\DutchPancakeDay;
-use Stef\SpecialDatesBundle\Dates\FirstChristmasDay;
-use Stef\SpecialDatesBundle\Dates\LastDayOfYear;
-use Stef\SpecialDatesBundle\Dates\NewYearsDay;
-use Stef\SpecialDatesBundle\Dates\SecondChristmasDay;
-use Stef\SpecialDatesBundle\Dates\WorldPiDay;
+use Stef\SpecialDates\Dates\ChristmasEvening;
+use Stef\SpecialDates\Dates\DutchPancakeDay;
+use Stef\SpecialDates\Dates\FirstChristmasDay;
+use Stef\SpecialDates\Dates\LastDayOfYear;
+use Stef\SpecialDates\Dates\NewYearsDay;
+use Stef\SpecialDates\Dates\SecondChristmasDay;
+use Stef\SpecialDates\Dates\WorldPiDay;
 
 class Parser
 {

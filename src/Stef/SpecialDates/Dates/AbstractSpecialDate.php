@@ -1,6 +1,6 @@
 <?php
 
-namespace Stef\SpecialDatesBundle\Dates;
+namespace Stef\SpecialDates\Dates;
 
 abstract class AbstractSpecialDate implements SpecialDateInterface
 {

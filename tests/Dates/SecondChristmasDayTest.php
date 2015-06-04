@@ -1,8 +1,8 @@
 <?php
 
-namespace Stef\SpecialDatesBundle\Tests\Dates;
+namespace Stef\SpecialDates\Tests\Dates;
 
-use Stef\SpecialDatesBundle\Dates\DutchPancakeDay;
+use Stef\SpecialDates\Dates\DutchPancakeDay;
 
 class SecondChristmasDayTest extends \PHPUnit_Framework_TestCase
 {
