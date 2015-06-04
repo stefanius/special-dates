@@ -1,6 +1,6 @@
 <?php
 
-namespace Stef\SpecialDates\Dates;
+namespace Stef\SpecialDates\SDK;
 
 abstract class AbstractSpecialDate implements SpecialDateInterface
 {
@@ -35,6 +35,16 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     protected $valid = true;
 
     /**
+     * @var bool
+     */
+    protected $bankHoliday = false;
+
+    /**
+     * @var bool
+     */
+    protected $nationalAcceptedParty = false;
+
+    /**
      * @var int
      */
     protected $year;
@@ -43,7 +53,7 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     {
         $this->year     = $year;
         $this->zeroDate = new \DateTime();
-        $this->zeroDate->setDate(0, 0, 0);
+        $this->zeroDate->setDate(1, 1, 1);
         $this->generate();
     }
 
@@ -90,6 +100,30 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     public function isValid()
     {
         return $this->valid;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isBankHoliday()
+    {
+        return $this->bankHoliday;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isNationalAcceptedParty()
+    {
+        return $this->nationalAcceptedParty;
+    }
+
+    /**
+     * @return int
+     */
+    public function getYear()
+    {
+        return $this->year;
     }
 
     abstract protected function generate();

@@ -1,6 +1,6 @@
 <?php
 
-namespace Stef\SpecialDates\Dates;
+namespace Stef\SpecialDates\SDK;
 
 interface SpecialDateInterface
 {
@@ -13,4 +13,10 @@ interface SpecialDateInterface
     public function getTotalLength();
 
     public function isValid();
+
+    public function isBankHoliday();
+
+    public function isNationalAcceptedParty();
+
+    public function getYear();
 }
