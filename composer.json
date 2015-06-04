@@ -1,0 +1,21 @@
+{
+  "name": "stefanius/special-dates",
+  "description": "Library with special dates. Mainly for the Netherlands, but if you will you may use and extends it in foreign countries ;)",
+  "authors": [
+    {
+      "name": "Stephan Grootveld",
+      "email": "sgrootveld@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~4.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Stef\\SpecialDates\\": "src/Stef/SpecialDates/"
+    }
+  }
+}
