@@ -1,7 +1,6 @@
 <?php
 
 use Stef\SpecialDates\Dates\LiberationDay;
-use Stef\SpecialDates\SDK\SpecialDateInterface;
 use Stef\SpecialDates\Tests\AbstractDateTester;
 
 class LiberationDayTest extends AbstractDateTester
