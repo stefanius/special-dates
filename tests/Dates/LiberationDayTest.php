@@ -7,18 +7,16 @@ use Stef\SpecialDates\Tests\AbstractDateTester;
 class LiberationDayTest extends AbstractDateTester
 {
     /**
-     * Create and return the SpecialDateObject you want to test.
-     *
-     * @param $year
-     *
-     * @return SpecialDateInterface
+     * {@inheritdoc}
      */
     protected function createDateObject($year)
     {
         return new LiberationDay($year);
     }
 
-
+    /**
+     * {@inheritdoc}
+     */
     public function provider()
     {
         $description = 'Bevrijdingsdag';
