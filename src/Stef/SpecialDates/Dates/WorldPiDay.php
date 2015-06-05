@@ -2,6 +2,8 @@
 
 namespace Stef\SpecialDates\Dates;
 
+use Stef\SpecialDates\SDK\AbstractSpecialDate;
+
 class WorldPiDay extends AbstractSpecialDate
 {
     protected function generate()

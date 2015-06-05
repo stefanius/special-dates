@@ -163,5 +163,13 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
         return $this->year;
     }
 
+    /**
+     * @return string
+     */
+    public function getNormalizedDescription()
+    {
+        return $this->normalizedDescription;
+    }
+
     abstract protected function generate();
 }

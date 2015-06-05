@@ -19,4 +19,6 @@ interface SpecialDateInterface
     public function isNationalAcceptedParty();
 
     public function getYear();
+
+    public function getNormalizedDescription();
 }
