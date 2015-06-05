@@ -8,10 +8,10 @@ class DutchSecretaryDay extends AbstractSpecialDate
 {
     protected function generate()
     {
-        $this->description = 'Secataressedag';
+        $this->description = 'Secretaressedag';
 
-        if ($this->year >= 2007) {
-            $timestamp       = strtotime('last friday', mktime(0, 0, 0, 4, 0, $this->year));
+        if ($this->year >= 1989) {
+            $timestamp       = strtotime('third thursday', mktime(0, 0, 0, 4, 0, $this->year));
             $this->startDate = new \DateTime();
             $this->startDate->setTimestamp($timestamp);
             $this->endDate = new \DateTime();
