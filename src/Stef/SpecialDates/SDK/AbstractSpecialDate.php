@@ -62,8 +62,21 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
         $this->endDate->setDate(1, 1, 1);
 
         $this->generate();
+
+        if ($this->startDate->format('Y') . '-' . $this->startDate->format('m') . '-' . $this->startDate->format('d') === '0001-01-01') {
+            $this->valid = false;
+            $this->totalLength = 0;
+        }
+
+        if ($this->endDate->format('Y') . '-' . $this->endDate->format('m') . '-' . $this->endDate->format('d') === '0001-01-01') {
+            $this->valid = false;
+            $this->totalLength = 0;
+        }
     }
 
+    /**
+     * @return \DateTime
+     */
     public function getStartDate()
     {
         if (!$this->valid || $this->startDate == null) {
