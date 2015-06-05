@@ -2,11 +2,13 @@
 
 namespace Stef\SpecialDates\Dates;
 
+use Stef\SpecialDates\SDK\AbstractSpecialDate;
+
 class DutchSecretaryDay extends AbstractSpecialDate
 {
     protected function generate()
     {
-        $this->description = 'Pannenkoekendag';
+        $this->description = 'Secataressedag';
 
         if ($this->year >= 2007) {
             $timestamp       = strtotime('last friday', mktime(0, 0, 0, 4, 0, $this->year));

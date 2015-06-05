@@ -2,6 +2,8 @@
 
 namespace Stef\SpecialDates\Dates;
 
+use Stef\SpecialDates\SDK\AbstractSpecialDate;
+
 class FirstChristmasDay extends AbstractSpecialDate
 {
     protected function generate()
