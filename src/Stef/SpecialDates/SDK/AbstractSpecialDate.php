@@ -45,6 +45,10 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     protected $nationalAcceptedParty = false;
 
     /**
+     * @var string
+     */
+    protected $normalizedDescription = false;
+    /**
      * @var int
      */
     protected $year;
@@ -72,8 +76,21 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
             $this->valid = false;
             $this->totalLength = 0;
         }
+
+        $this->normalizeDescription();
     }
 
+    protected function normalizeDescription()
+    {
+        $string = iconv('UTF-8', 'ASCII//TRANSLIT', $this->description);
+        $string = trim($string);
+        $string = preg_replace("/[^a-zA-Z0-9_| -]/", ' ', $string);
+        $string = preg_replace("/[| -]+/", '-', $string);
+        $string = strtolower(trim($string, '-'));
+        $string = preg_replace('/-{2,}/', ' ', $string);
+
+        $this->normalizedDescription = $string;
+    }
     /**
      * @return \DateTime
      */
