@@ -54,6 +54,13 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
         $this->year     = $year;
         $this->zeroDate = new \DateTime();
         $this->zeroDate->setDate(1, 1, 1);
+
+        $this->startDate = new \DateTime();
+        $this->startDate->setDate(1, 1, 1);
+
+        $this->endDate = new \DateTime();
+        $this->endDate->setDate(1, 1, 1);
+
         $this->generate();
     }
 
