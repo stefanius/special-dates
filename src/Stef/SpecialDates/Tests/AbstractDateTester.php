@@ -16,7 +16,7 @@ abstract class AbstractDateTester extends \PHPUnit_Framework_TestCase
      *
      * @dataProvider provider
      */
-    public function testSpecialDate($year, $description, $isValid, $bankHoliday, $totalLength, $endDateString, $startDateString)
+    public function testSpecialDate($year, $description, $isValid, $bankHoliday, $totalLength, $startDateString, $endDateString)
     {
         $specialDate = $this->createDateObject($year);
 

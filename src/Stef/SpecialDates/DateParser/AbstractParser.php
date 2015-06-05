@@ -12,6 +12,7 @@ use Stef\SpecialDates\Dates\LastDayOfYear;
 use Stef\SpecialDates\Dates\LiberationDay;
 use Stef\SpecialDates\Dates\NewYearsDay;
 use Stef\SpecialDates\Dates\SecondChristmasDay;
+use Stef\SpecialDates\Dates\SeriousRequest;
 use Stef\SpecialDates\Dates\ValentinesDay;
 use Stef\SpecialDates\Dates\WorldPiDay;
 
@@ -32,6 +33,7 @@ class AbstractParser
             new DutchNeighboursDay($year),
             new DevelopersDay($year),
             new ValentinesDay($year),
+            new SeriousRequest($year),
         ];
     }
 }
