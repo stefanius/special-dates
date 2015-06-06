@@ -11,7 +11,7 @@ class SystemEngineerDay extends AbstractSpecialDate
         $this->description = 'Systeembeheerdersdag';
 
         if ($this->year >= 2000) {
-            $timestamp       = strtotime('last friday', mktime(0, 0, 0, 6, 0, $this->year));
+            $timestamp       = strtotime('last friday', mktime(0, 0, 0, 7, 0, $this->year));
             $date = new \DateTime();
             $date->setTimestamp($timestamp);
 
