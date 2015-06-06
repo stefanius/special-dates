@@ -91,6 +91,40 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
 
         $this->normalizedDescription = $string;
     }
+
+    /**
+     * @param $year
+     * @param $month
+     * @param $day
+     *
+     * @return \DateTime
+     */
+    protected function generateDateTime($year, $month, $day)
+    {
+        $date = \DateTime::createFromFormat('Y-m-d', $year . '-' . $month . '-' . $day);
+
+        if ($date === false) {
+            return $this->zeroDate;
+        }
+
+        return $date;
+    }
+
+    protected function setupDateTimeObjects(\DateTime $start, \DateTime $end = null)
+    {
+        $this->startDate = $start;
+
+        if ($end === null) {
+            $this->endDate = $start;
+        } else {
+            $this->endDate = $end;
+        }
+
+        $interval = $this->startDate->diff($this->endDate);
+
+        $this->totalLength = (int)$interval->format('%R%a') + 1;
+    }
+
     /**
      * @return \DateTime
      */

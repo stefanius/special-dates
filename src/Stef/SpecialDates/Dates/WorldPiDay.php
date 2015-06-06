@@ -10,8 +10,8 @@ class WorldPiDay extends AbstractSpecialDate
     {
         $this->description = 'Wereld Pi dag';
 
-        $this->startDate   = \DateTime::createFromFormat('Y-m-d', $this->year . '-3-14');
-        $this->endDate     = \DateTime::createFromFormat('Y-m-d', $this->year . '-3-14');
+        $this->setupDateTimeObjects($this->generateDateTime($this->year, 3, 14));
+
         $this->totalLength = 1;
     }
 }

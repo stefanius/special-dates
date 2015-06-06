@@ -11,9 +11,7 @@ class SeriousRequest extends AbstractSpecialDate
         $this->description = '3FM Serious Request';
 
         if ($this->year >= 2004) {
-            $this->startDate   = \DateTime::createFromFormat('Y-m-d', $this->year . '-12-18');
-            $this->endDate     = \DateTime::createFromFormat('Y-m-d', $this->year . '-12-24');
-            $this->totalLength = 6;
+            $this->setupDateTimeObjects($this->generateDateTime($this->year, 12, 19), $this->generateDateTime($this->year, 12, 24));
             $this->valid = true;
         } else {
             $this->valid = false;

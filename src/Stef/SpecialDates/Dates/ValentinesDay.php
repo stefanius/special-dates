@@ -9,8 +9,7 @@ class ValentinesDay extends AbstractSpecialDate
     protected function generate()
     {
         $this->description = 'Valentijnsdag';
-        $this->startDate   = \DateTime::createFromFormat('Y-m-d', $this->year . '-02-14');
-        $this->endDate     = \DateTime::createFromFormat('Y-m-d', $this->year . '-02-14');
-        $this->totalLength = 1;
+
+        $this->setupDateTimeObjects($this->generateDateTime($this->year, 2, 14));
     }
 }

@@ -26,10 +26,10 @@ class SeriousRequestTest extends AbstractDateTester
             [1950, $description, false, false, 0, '0001-01-01', '0001-01-01'],
             [1989, $description, false, false, 0, '0001-01-01', '0001-01-01'],
             [2000, $description, false, false, 0, '0001-01-01', '0001-01-01'],
-            [2004, $description, true, false, 6, '2004-12-18', '2004-12-24'],
-            [2006, $description, true, false, 6, '2006-12-18', '2006-12-24'],
-            [2015, $description, true, false, 6, '2015-12-18', '2015-12-24'],
-            [2050, $description, true, false, 6, '2050-12-18', '2050-12-24'],
+            [2004, $description, true, false, 6, '2004-12-19', '2004-12-24'],
+            [2006, $description, true, false, 6, '2006-12-19', '2006-12-24'],
+            [2015, $description, true, false, 6, '2015-12-19', '2015-12-24'],
+            [2050, $description, true, false, 6, '2050-12-19', '2050-12-24'],
         ];
     }
 }
