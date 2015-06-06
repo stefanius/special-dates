@@ -15,12 +15,13 @@ use Stef\SpecialDates\Dates\SecondChristmasDay;
 use Stef\SpecialDates\Dates\SeriousRequest;
 use Stef\SpecialDates\Dates\ValentinesDay;
 use Stef\SpecialDates\Dates\WorldPiDay;
+use Stef\SpecialDates\SDK\SpecialDateInterface;
 
 class AbstractParser
 {
     public function getAllDates($year)
     {
-        return [
+        $array =  [
             new NewYearsDay($year),
             new DutchPancakeDay($year),
             new WorldPiDay($year),
@@ -35,5 +36,21 @@ class AbstractParser
             new ValentinesDay($year),
             new SeriousRequest($year),
         ];
+
+        $return = [];
+        $i = 0;
+
+        /**
+         * @var $item SpecialDateInterface
+         */
+        foreach ($array as $item) {
+            $key = $item->getStartDate()->format('Y') . '-' . $item->getStartDate()->format('m') . '-' . $item->getStartDate()->format('d') . '.' . $i;
+            $i++;
+            $return[$key] = $item;
+        }
+
+        ksort($return);
+
+        return $return;
     }
 }
