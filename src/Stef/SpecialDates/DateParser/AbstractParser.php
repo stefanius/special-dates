@@ -18,21 +18,27 @@ use Stef\SpecialDates\Dates\DutchVeteransDay;
 use Stef\SpecialDates\Dates\EnvironmentDay;
 use Stef\SpecialDates\Dates\FathersDay;
 use Stef\SpecialDates\Dates\FirstChristmasDay;
+use Stef\SpecialDates\Dates\GardenGuyDay;
 use Stef\SpecialDates\Dates\HumanDay;
+use Stef\SpecialDates\Dates\InternationalCoopDay;
 use Stef\SpecialDates\Dates\LastDayOfYear;
 use Stef\SpecialDates\Dates\LiberationDay;
+use Stef\SpecialDates\Dates\NelsonMandelaDay;
 use Stef\SpecialDates\Dates\NewYearsDay;
+use Stef\SpecialDates\Dates\OutsideTheTimeDay;
 use Stef\SpecialDates\Dates\PeaceAndPreyDay;
 use Stef\SpecialDates\Dates\PinkSaturday;
 use Stef\SpecialDates\Dates\RefugeeDay;
 use Stef\SpecialDates\Dates\SecondChristmasDay;
 use Stef\SpecialDates\Dates\SeriousRequest;
+use Stef\SpecialDates\Dates\SystemEngineerDay;
 use Stef\SpecialDates\Dates\TortureDay;
 use Stef\SpecialDates\Dates\TouretteDay;
 use Stef\SpecialDates\Dates\UnitedNationsDay;
 use Stef\SpecialDates\Dates\ValentinesDay;
 use Stef\SpecialDates\Dates\WorldOceanDay;
 use Stef\SpecialDates\Dates\WorldPiDay;
+use Stef\SpecialDates\Dates\WorldPopulationDay;
 use Stef\SpecialDates\SDK\SpecialDateInterface;
 
 class AbstractParser
@@ -71,6 +77,12 @@ class AbstractParser
             new TortureDay($year),
             new UnitedNationsDay($year),
             new WorldOceanDay($year),
+            new InternationalCoopDay($year),
+            new NelsonMandelaDay($year),
+            new OutsideTheTimeDay($year),
+            new SystemEngineerDay($year),
+            new GardenGuyDay($year),
+            new WorldPopulationDay($year),
         ];
 
         $return = [];
