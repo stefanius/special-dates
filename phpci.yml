@@ -11,6 +11,16 @@ setup:
   composer:
     action: "install"
     prefer_dist: false
+  
+test:
+  php_unit:
+      config:
+          - "PHPUnit-all.xml"
+          - "PHPUnit-ubuntu-fix.xml"
+      directory:
+          - "tests/"
+      run_from: "phpunit/"
+      coverage: "tests/logs/coverage"
 
 failure:
   email:
