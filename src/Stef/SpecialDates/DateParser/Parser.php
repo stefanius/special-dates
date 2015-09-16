@@ -4,7 +4,7 @@ namespace Stef\SpecialDates\DateParser;
 
 use Stef\SpecialDates\SDK\SpecialDateInterface;
 
-class Parser extends AbstractParser
+class Parsert extends AbstractParser
 {
     /**
      * @param $year
