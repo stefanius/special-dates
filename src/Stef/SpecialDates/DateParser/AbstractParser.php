@@ -45,7 +45,7 @@ class AbstractParser
 {
     public function getAllDates($year)
     {
-        $array =  [
+        $array = [
             new NewYearsDay($year),
             new DutchPancakeDay($year),
             new WorldPiDay($year),
@@ -89,7 +89,7 @@ class AbstractParser
         $i = 0;
 
         /**
-         * @var $item SpecialDateInterface
+         * @var SpecialDateInterface $item
          */
         foreach ($array as $item) {
             $key = $item->getStartDate()->format('Y') . '-' . $item->getStartDate()->format('m') . '-' . $item->getStartDate()->format('d') . '.' . $i;
