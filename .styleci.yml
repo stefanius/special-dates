@@ -22,4 +22,4 @@ finder:
   not-path:
     - "libraries"
   depth:
-    - "< 3"
+    - "< 7"
