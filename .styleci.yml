@@ -3,7 +3,6 @@ preset: symfony
 linting: true
 
 enabled:
-  - align_double_arrow
   - short_array_syntax
   - strict
 
