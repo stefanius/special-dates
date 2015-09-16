@@ -14,11 +14,11 @@ finder:
   not-name:
     - "*Stub.php"
   contains:
-    - "Foo"
+    - "Stef"
   not-contains:
     - "config"
   path:
-    - "src/"
+    - "src/Stef"
   not-path:
     - "libraries"
   depth:
