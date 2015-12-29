@@ -61,4 +61,27 @@ class Parser extends AbstractParser
 
         return $found;
     }
+
+    /**
+     * @param $year
+     * @param $month
+     *
+     * @return array
+     */
+    public function findSpecialDateByMonthNumber($year, $month)
+    {
+        $items = $this->getAllDates($year);
+        $found = [];
+
+        /**
+         * @var $item SpecialDateInterface
+         */
+        foreach ($items as $key => $item) {
+            if ((int)$month === (int)$item->getStartDate()->format('m')) {
+                $found[$key] = $item;
+            }
+        }
+
+        return $found;
+    }
 }
