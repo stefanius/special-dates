@@ -4,7 +4,7 @@ class UsedDateClassesTest extends \PHPUnit_Framework_TestCase
 {
     public function testSpecialDate()
     {
-        $rootpath = __DIR__ . '/../../src/Stef/SpecialDates';
+        $rootpath = __DIR__ . '/../../src/Stefanius/SpecialDates';
 
         $files = scandir($rootpath . '/Dates');
         $parserFile = file_get_contents($rootpath . '/DateParser/AbstractParser.php');
@@ -26,7 +26,7 @@ class UsedDateClassesTest extends \PHPUnit_Framework_TestCase
             $this->assertTrue($found, 'Class is not used in AbstractParser. Add: \'new ' . $className . '($year)\'');
         }
 
-        $parser = new \Stef\SpecialDates\DateParser\Parser();
+        $parser = new \Stefanius\SpecialDates\DateParser\Parser();
         $list = $parser->getAllDates(2000);
 
         $this->assertEquals(count($classNames), count($list), 'There are ' . count($classNames) . ' valid classnames found, but there ' . count($list) . ' are returned from the parser. Fix this!');

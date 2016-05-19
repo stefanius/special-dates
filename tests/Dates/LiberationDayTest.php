@@ -1,7 +1,7 @@
 <?php
 
-use Stef\SpecialDates\Dates\LiberationDay;
-use Stef\SpecialDates\Tests\AbstractDateTester;
+use Stefanius\SpecialDates\Dates\LiberationDay;
+use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class LiberationDayTest extends AbstractDateTester
 {

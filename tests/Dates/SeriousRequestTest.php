@@ -1,7 +1,7 @@
 <?php
 
-use Stef\SpecialDates\Dates\SeriousRequest;
-use Stef\SpecialDates\Tests\AbstractDateTester;
+use Stefanius\SpecialDates\Dates\SeriousRequest;
+use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class SeriousRequestTest extends AbstractDateTester
 {

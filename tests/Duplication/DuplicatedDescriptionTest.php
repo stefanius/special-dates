@@ -7,12 +7,12 @@ class DuplicatedDescriptionTest extends \PHPUnit_Framework_TestCase
      */
     public function testDuplication()
     {
-        $parser = new \Stef\SpecialDates\DateParser\Parser();
+        $parser = new \Stefanius\SpecialDates\DateParser\Parser();
         $descriptions = [];
         $dates = $parser->getAllDates(2000);
 
         /**
-         * @var $date \Stef\SpecialDates\SDK\SpecialDateInterface
+         * @var $date \Stefanius\SpecialDates\SDK\SpecialDateInterface
          */
         foreach ($dates as $date) {
             $desc = $date->getNormalizedDescription();

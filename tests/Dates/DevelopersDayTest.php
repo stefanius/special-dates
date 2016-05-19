@@ -1,7 +1,7 @@
 <?php
 
-use Stef\SpecialDates\Dates\DevelopersDay;
-use Stef\SpecialDates\Tests\AbstractDateTester;
+use Stefanius\SpecialDates\Dates\DevelopersDay;
+use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class DevelopersDayTest extends AbstractDateTester
 {

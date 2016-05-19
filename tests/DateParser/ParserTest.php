@@ -1,6 +1,6 @@
 <?php
 
-use Stef\SpecialDates\DateParser\Parser;
+use Stefanius\SpecialDates\DateParser\Parser;
 
 class ParserTest extends \PHPUnit_Framework_TestCase
 {
@@ -17,7 +17,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(count($found) < count($all));
 
         foreach ($found as $item) {
-            if ($item instanceof \Stef\SpecialDates\Dates\NewYearsDay) {
+            if ($item instanceof \Stefanius\SpecialDates\Dates\NewYearsDay) {
                 $foundNewYearsDay = true;
             }
         }

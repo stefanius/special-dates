@@ -1,7 +1,7 @@
 <?php
 
-use Stef\SpecialDates\Dates\DutchNeighboursDay;
-use Stef\SpecialDates\Tests\AbstractDateTester;
+use Stefanius\SpecialDates\Dates\DutchNeighboursDay;
+use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class DutchNeighboursDayTest extends AbstractDateTester
 {
