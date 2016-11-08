@@ -1,6 +1,6 @@
 <?php
 
-namespace Stefanius\SpecialDates\Dates;
+namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
@@ -10,9 +10,7 @@ class FathersDay extends AbstractSpecialDate
     {
         $this->description = 'Vaderdag';
 
-        if ($this->year >= 2009) {
-            $this->setupDateTimeObjects($this->generateDateTime($this->year, 6, 19));
-        } else if ($this->year >= 1909) {
+        if ($this->year >= 1948) {
             $timestamp       = strtotime('third sunday', mktime(0, 0, 0, 6, 0, $this->year));
             $date = new \DateTime();
             $date->setTimestamp($timestamp);
