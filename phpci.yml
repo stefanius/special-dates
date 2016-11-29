@@ -24,6 +24,15 @@ test:
   php_docblock_checker:
     allowed_warnings: 0
 
+success:
+  slack_notify:
+      webhook_url: "https://hooks.slack.com/services/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"
+      room: "#phpci"
+      username: "PHPCI"
+      icon: ":metal:"
 failure:
-  email:
-    committer: true
+  slack_notify:
+      webhook_url: "https://hooks.slack.com/services/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"
+      room: "#phpci"
+      username: "PHPCI"
+      icon: ":poop:"
