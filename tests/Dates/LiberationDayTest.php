@@ -1,6 +1,6 @@
 <?php
 
-use Stefanius\SpecialDates\Dates\LiberationDay;
+use Stefanius\SpecialDates\CommonDates\LiberationDay;
 use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class LiberationDayTest extends AbstractDateTester
