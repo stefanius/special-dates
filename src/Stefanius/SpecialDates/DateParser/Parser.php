@@ -4,6 +4,11 @@ namespace Stefanius\SpecialDates\DateParser;
 
 use Stefanius\SpecialDates\SDK\SpecialDateInterface;
 
+/**
+ * Class Parser
+ *
+ * @package Stefanius\SpecialDates\DateParser
+ */
 class Parser extends AbstractParser
 {
     /**
@@ -44,7 +49,7 @@ class Parser extends AbstractParser
      */
     public function findSpecialDateByDateTime(\DateTime $date)
     {
-        $formattedDate = $date->format('Y') . '-' . $date->format('m') . $date->format('d');
+        $formattedDate = $date->format('Y-m-d');
         $items = $this->getAllDates($date->format('Y'));
         $found = [];
 
@@ -52,7 +57,7 @@ class Parser extends AbstractParser
          * @var $item SpecialDateInterface
          */
         foreach ($items as $key => $item) {
-            $formattedStartDate = $item->getStartDate()->format('Y') . '-' . $item->getStartDate()->format('m') . $item->getStartDate()->format('d');
+            $formattedStartDate = $item->getStartDate()->format('Y-m-d');
 
             if ($formattedDate === $formattedStartDate) {
                 $found[$key] = $item;

@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class FirstChristmasDay
+ *
+ * @package Stefanius\SpecialDates\CommonDates
+ */
 class FirstChristmasDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Eerste Kerstdag';

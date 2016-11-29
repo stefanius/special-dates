@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class MothersDay
+ *
+ * @package Stefanius\SpecialDates\CommonDates
+ */
 class MothersDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Moederdag';

@@ -4,8 +4,15 @@ namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class LiberationDay
+ * @package Stefanius\SpecialDates\CommonDates
+ */
 class LiberationDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Bevrijdingsdag';

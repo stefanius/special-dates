@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\Dates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class WorldOceanDay
+ *
+ * @package Stefanius\SpecialDates\Dates
+ */
 class WorldOceanDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Wereld Oceanen Dag';

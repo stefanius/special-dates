@@ -37,7 +37,7 @@ interface SpecialDateInterface
     /**
      * @return bool
      */
-    public function isNationalAcceptedParty();
+    public function isNationalAccepted();
 
     /**
      * @return integer
@@ -47,5 +47,5 @@ interface SpecialDateInterface
     /**
      * @return string
      */
-    public function getNormalizedDescription();
+    public function slug();
 }

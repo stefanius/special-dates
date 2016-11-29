@@ -45,8 +45,20 @@ use Stefanius\SpecialDates\Dates\WorldPiDay;
 use Stefanius\SpecialDates\Dates\WorldPopulationDay;
 use Stefanius\SpecialDates\SDK\SpecialDateInterface;
 
+/**
+ * Class AbstractParser
+ *
+ * @package Stefanius\SpecialDates\DateParser
+ */
 class AbstractParser
 {
+    /**
+     * Get all special dates from a given year.
+     *
+     * @param $year
+     *
+     * @return array
+     */
     public function getAllDates($year)
     {
         $array = [
@@ -94,14 +106,21 @@ class AbstractParser
         ];
 
         $return = [];
-        $i = 0;
+        $counter = 0;
 
         /**
          * @var SpecialDateInterface $item
          */
         foreach ($array as $item) {
-            $key = $item->getStartDate()->format('Y') . '-' . $item->getStartDate()->format('m') . '-' . $item->getStartDate()->format('d') . '.' . $i;
-            $i++;
+            $key = sprintf(
+                "%s-%s-%s.%s",
+                $item->getStartDate()->format('Y'),
+                $item->getStartDate()->format('m'),
+                $item->getStartDate()->format('d'),
+                $counter
+            );
+
+            $counter++;
             $return[$key] = $item;
         }
 
