@@ -1,6 +1,6 @@
 <?php
 
-namespace Stefanius\SpecialDates\Dates;
+namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 

@@ -17,7 +17,7 @@ class ParserTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(count($found) < count($all));
 
         foreach ($found as $item) {
-            if ($item instanceof \Stefanius\SpecialDates\Dates\NewYearsDay) {
+            if ($item instanceof \Stefanius\SpecialDates\CommonDates\NewYearsDay) {
                 $foundNewYearsDay = true;
             }
         }

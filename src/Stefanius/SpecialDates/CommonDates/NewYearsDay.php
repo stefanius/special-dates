@@ -1,6 +1,6 @@
 <?php
 
-namespace Stefanius\SpecialDates\Dates;
+namespace Stefanius\SpecialDates\CommonDates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
@@ -13,5 +13,6 @@ class NewYearsDay extends AbstractSpecialDate
         $this->startDate   = \DateTime::createFromFormat('Y-m-d', $this->year . '-1-1');
         $this->endDate     = \DateTime::createFromFormat('Y-m-d', $this->year . '-1-1');
         $this->totalLength = 1;
+        $this->bankHoliday = true;
     }
 }

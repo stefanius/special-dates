@@ -1,6 +1,6 @@
 <?php
 
-use Stefanius\SpecialDates\Dates\ValentinesDay;
+use Stefanius\SpecialDates\CommonDates\ValentinesDay;
 use Stefanius\SpecialDates\Tests\AbstractDateTester;
 
 class ValentinesDayTest extends AbstractDateTester
