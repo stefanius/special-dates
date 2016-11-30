@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\Dates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class WorldPiDay
+ *
+ * @package Stefanius\SpecialDates\Dates
+ */
 class WorldPiDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Wereld Pi dag';

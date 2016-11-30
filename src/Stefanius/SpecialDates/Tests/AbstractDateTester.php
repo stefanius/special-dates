@@ -1,8 +1,14 @@
 <?php
+
 namespace Stefanius\SpecialDates\Tests;
 
 use Stefanius\SpecialDates\SDK\SpecialDateInterface;
 
+/**
+ * Class AbstractDateTester
+ *
+ * @package Stefanius\SpecialDates\Tests
+ */
 abstract class AbstractDateTester extends \PHPUnit_Framework_TestCase
 {
     /**

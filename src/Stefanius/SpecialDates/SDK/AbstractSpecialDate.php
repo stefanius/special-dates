@@ -2,6 +2,11 @@
 
 namespace Stefanius\SpecialDates\SDK;
 
+/**
+ * Class AbstractSpecialDate
+ *
+ * @package Stefanius\SpecialDates\SDK
+ */
 abstract class AbstractSpecialDate implements SpecialDateInterface
 {
     /**
@@ -35,24 +40,33 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     protected $valid = true;
 
     /**
+     * Is the day a bank holiday
+     *
      * @var bool
      */
     protected $bankHoliday = false;
 
     /**
+     * Is the day a national accepted date
+     *
      * @var bool
      */
-    protected $nationalAcceptedParty = false;
+    protected $nationalAccepted = false;
 
     /**
      * @var string
      */
-    protected $normalizedDescription = false;
+    protected $slug = false;
     /**
      * @var int
      */
     protected $year;
 
+    /**
+     * AbstractSpecialDate constructor.
+     *
+     * @param $year
+     */
     public function __construct($year)
     {
         $this->year     = $year;
@@ -67,20 +81,23 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
 
         $this->generate();
 
-        if ($this->startDate->format('Y') . '-' . $this->startDate->format('m') . '-' . $this->startDate->format('d') === '0001-01-01') {
+        if ($this->startDate->format('Y-m-d') === '0001-01-01') {
             $this->valid = false;
             $this->totalLength = 0;
         }
 
-        if ($this->endDate->format('Y') . '-' . $this->endDate->format('m') . '-' . $this->endDate->format('d') === '0001-01-01') {
+        if ($this->endDate->format('Y-m-d') === '0001-01-01') {
             $this->valid = false;
             $this->totalLength = 0;
         }
 
-        $this->normalizeDescription();
+        $this->slugifyDescription();
     }
 
-    protected function normalizeDescription()
+    /**
+     * Normalize description to a slug
+     */
+    protected function slugifyDescription()
     {
         $string = iconv('UTF-8', 'ASCII//TRANSLIT', $this->description);
         $string = trim($string);
@@ -89,7 +106,7 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
         $string = strtolower(trim($string, '-'));
         $string = preg_replace('/-{2,}/', ' ', $string);
 
-        $this->normalizedDescription = $string;
+        $this->slug = $string;
     }
 
     /**
@@ -110,6 +127,10 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
         return $date;
     }
 
+    /**
+     * @param \DateTime $start
+     * @param \DateTime|null $end
+     */
     protected function setupDateTimeObjects(\DateTime $start, \DateTime $end = null)
     {
         $this->startDate = $start;
@@ -184,9 +205,9 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     /**
      * @return boolean
      */
-    public function isNationalAcceptedParty()
+    public function isNationalAccepted()
     {
-        return $this->nationalAcceptedParty;
+        return $this->nationalAccepted;
     }
 
     /**
@@ -200,10 +221,13 @@ abstract class AbstractSpecialDate implements SpecialDateInterface
     /**
      * @return string
      */
-    public function getNormalizedDescription()
+    public function slug()
     {
-        return $this->normalizedDescription;
+        return $this->slug;
     }
 
+    /**
+     * Generate the special date
+     */
     abstract protected function generate();
 }

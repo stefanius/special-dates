@@ -9,9 +9,14 @@ use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
  * see: https://nl.wikipedia.org/wiki/Paas-_en_pinksterdatum#Methode_van_Gauss
  *
  * @package Stefanius\SpecialDates\CommonDates
+ *
+ * @SuppressWarnings(PHPMD.ShortVariable)
  */
 class SecondEasterDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->bankHoliday = true;
@@ -35,7 +40,8 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     * Deel het jaartal door 19, neem de rest, en tel er 1 bij op (zoals Dionysius). Noem dit getal G. Voor het jaar 1991 geldt G = 16.
+     * Deel het jaartal door 19, neem de rest, en tel er 1 bij op (zoals Dionysius).
+     * Noem dit getal G. Voor het jaar 1991 geldt G = 16.
      *
      * @return int
      */
@@ -55,7 +61,8 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     * Vermenigvuldig C met 3, geheeldeel het resultaat door 4 en trek er 12 van af. Noem dit getal X. Voor de twintigste en eenentwintigste eeuw geldt X = 3.
+     * Vermenigvuldig C met 3, geheeldeel het resultaat door 4 en trek er 12 van af. Noem dit getal X.
+     * Voor de twintigste en eenentwintigste eeuw geldt X = 3.
      *
      * @param int $c
      * @return float
@@ -66,7 +73,8 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     *  Neem 8 maal C, tel er 5 bij op, geheeldeel dit door 25 en trek er 5 vanaf. Noem dit getal Y. Voor de twintigste en eenentwintigste eeuw geldt: Y = 1.
+     *  Neem 8 maal C, tel er 5 bij op, geheeldeel dit door 25 en trek er 5 vanaf. Noem dit getal Y.
+     * Voor de twintigste en eenentwintigste eeuw geldt: Y = 1.
      *
      * @param int $c
      * @return float
@@ -77,7 +85,8 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     * Vermenigvuldig het jaartal met 5, geheeldeel de uitkomst door 4, trek er X en 10 vanaf, en noem dit getal Z. Voor 1991 geldt: Z = 2475.
+     * Vermenigvuldig het jaartal met 5, geheeldeel de uitkomst door 4, trek er X en 10 vanaf, en noem dit getal Z.
+     * Voor 1991 geldt: Z = 2475.
      *
      * @param int $x
      * @return float
@@ -88,7 +97,9 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     * 11 maal G + 20 + Y. Trek daarvan X af, geheeldeel het resultaat door 30 en noem de rest E. Als E gelijk is aan 24, of als E gelijk is aan 25 en het gulden getal is groter dan 11, tel dan 1 bij E op. De Epacta voor 1991 is 14.
+     * 11 maal G + 20 + Y. Trek daarvan X af, geheeldeel het resultaat door 30 en noem de rest E.
+     * Als E gelijk is aan 24, of als E gelijk is aan 25 en het gulden getal is groter dan 11, tel dan 1 bij E op.
+     * De Epacta voor 1991 is 14.
      *
      * @param int $x
      * @return float
@@ -123,20 +134,16 @@ class SecondEasterDay extends AbstractSpecialDate
     }
 
     /**
-     * Tel Z en N op. Geheeldeel het resultaat door 7 en trek de rest af van N+7. Noem dit getal P. Voor 1991 geldt: P = 31.
+     * Tel Z en N op. Geheeldeel het resultaat door 7 en trek de rest af van N+7. Noem dit getal P.
+     * Voor 1991 geldt: P = 31.
      *
      * @param int $z
      * @param int $n
+     *
      * @return int
      */
     protected function calculatePNumber(int $z, int $n)
     {
         return ($n + 7) - (($z + $n) % 7);
     }
-
-    /**
-
-
-    Paasdatum: Als P groter is dan 31, trek er dan 31 vanaf, en de paasdatum valt in april. Anders is de paasdag P in maart. Zo wordt voor 1991 gevonden 31 maart.
-     */
 }

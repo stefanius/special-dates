@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\Dates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class SystemEngineerDay
+ *
+ * @package Stefanius\SpecialDates\Dates
+ */
 class SystemEngineerDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Systeembeheerdersdag';

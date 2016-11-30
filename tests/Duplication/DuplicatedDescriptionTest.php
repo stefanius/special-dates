@@ -11,11 +11,8 @@ class DuplicatedDescriptionTest extends \PHPUnit_Framework_TestCase
         $descriptions = [];
         $dates = $parser->getAllDates(2000);
 
-        /**
-         * @var $date \Stefanius\SpecialDates\SDK\SpecialDateInterface
-         */
         foreach ($dates as $date) {
-            $desc = $date->getNormalizedDescription();
+            $desc = $date->slug();
 
             if (array_key_exists($desc, $descriptions)) {
                 $descriptions[$desc]++;

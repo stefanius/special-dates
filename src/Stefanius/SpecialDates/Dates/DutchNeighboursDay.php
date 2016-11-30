@@ -4,8 +4,16 @@ namespace Stefanius\SpecialDates\Dates;
 
 use Stefanius\SpecialDates\SDK\AbstractSpecialDate;
 
+/**
+ * Class DutchNeighboursDay
+ *
+ * @package Stefanius\SpecialDates\Dates
+ */
 class DutchNeighboursDay extends AbstractSpecialDate
 {
+    /**
+     * Generate the special date
+     */
     protected function generate()
     {
         $this->description = 'Burendag';
