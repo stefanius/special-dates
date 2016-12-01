@@ -15,6 +15,7 @@ use Stefanius\SpecialDates\Dates\DayOfConstruction;
 use Stefanius\SpecialDates\Dates\DessertDay;
 use Stefanius\SpecialDates\Dates\DevelopersDay;
 use Stefanius\SpecialDates\Dates\DrugsAbuseDay;
+use Stefanius\SpecialDates\Dates\DutchCarnaval;
 use Stefanius\SpecialDates\Dates\DutchNeighboursDay;
 use Stefanius\SpecialDates\Dates\DutchPancakeDay;
 use Stefanius\SpecialDates\Dates\DutchSecretaryDay;
@@ -35,6 +36,7 @@ use Stefanius\SpecialDates\Dates\PinkSaturday;
 use Stefanius\SpecialDates\Dates\RefugeeDay;
 use Stefanius\SpecialDates\CommonDates\SecondChristmasDay;
 use Stefanius\SpecialDates\Dates\SeriousRequest;
+use Stefanius\SpecialDates\Dates\StartCarnavalSeason;
 use Stefanius\SpecialDates\Dates\SystemEngineerDay;
 use Stefanius\SpecialDates\Dates\TortureDay;
 use Stefanius\SpecialDates\Dates\TouretteDay;
@@ -103,6 +105,8 @@ class AbstractParser
             new SecondEasterDay($year),
             new GoodFriday($year),
             new MothersDay($year),
+            new DutchCarnaval($year),
+            new StartCarnavalSeason($year),
         ];
 
         $return = [];
